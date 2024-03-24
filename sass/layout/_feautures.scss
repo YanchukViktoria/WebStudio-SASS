@@ -1,0 +1,58 @@
+.section-features{
+    padding-top: 60px;
+    padding-bottom: 30px;
+
+    @include desc(1200px){
+        padding: 94px 0;
+    }
+}
+
+.feautures-list{
+
+    &-descript{
+        @include font-style(Roboto, 14px, 400, 1.1, 0.03em, left, $p-color);
+        width: 450px;
+        margin-bottom: 30px;
+
+        @include desc(1200px){
+            margin: 0;
+        }
+    }
+
+    &-title{
+        @include font-style(Roboto, 14px, 700, 1.1, 0.03em, center, $descript-and-header-color);
+        padding-bottom: 10px;
+        padding-top: 30px;
+
+        @include desc(1200px){
+            @include font-style(Roboto, 14px, 700, 1.1, 0.03em, left, $descript-and-header-color);
+        }
+    }
+
+    @include tab(768px){
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        flex-direction: row;
+
+        &-item{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-descript{
+            width: 354px;
+        }
+    }
+
+    @include desc(1200px){
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+
+        &-descript{
+            width: 270px;
+        }
+    }
+}

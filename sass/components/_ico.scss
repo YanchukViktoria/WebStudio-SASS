@@ -1,0 +1,58 @@
+//join-ico *in footer*
+
+.join-list{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: &p-color;
+
+    &-link{
+        @extend %svg-link ;
+        color: &adress-hero-color;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &-link:hover{
+        background-color: $blue-main-color;
+    }
+
+    &-svg{
+        fill: currentColor;
+    }
+
+}
+
+//team-ico *section-team main page*
+
+.icons-list{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 16px;
+
+    &-link{
+        @extend %svg-link;
+        color: rgba(175, 177, 184);
+    }
+
+    &-link:hover{
+        color: $adress-hero-color;
+        background-color: $blue-main-color;
+    }
+
+    &-svg{
+        fill: currentColor;
+    }
+
+}
+
+//clients-ico *section-clients over footer*
+
+.client-ico-list{
+    display: flex;
+    gap: 30px;
+}
+
+.client-ico-svg{
+    fill: currentColor;
+}

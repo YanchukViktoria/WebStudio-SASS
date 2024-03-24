@@ -1,0 +1,15 @@
+.logo{
+    @include font-style(Raleway, 24px, 700, 1.1, 0.03em, center, $blue-main-color);
+   
+    &-header{
+        color: $black-main-color;
+    }
+
+    &-footer{
+        color: $adress-hero-color;
+    }
+
+    @include tab(768px){
+        @include font-style(Raleway, 26px, 700, 1.1, 0.03em, center, $blue-main-color);
+    }
+}

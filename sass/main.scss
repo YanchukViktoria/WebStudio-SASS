@@ -1,0 +1,37 @@
+@import "./abstracts/mixins";
+@import "./abstracts/placeholders";
+@import "./abstracts/variables";
+
+@import "./base/container";
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/body";
+
+@import "./components/adress-portfolio";
+@import "./components/adress";
+@import "./components/feautures-decor";
+@import "./components/form-ico";
+@import "./components/ico";
+@import "./components/logo";
+@import "./components/main-btn";
+@import "./components/portfolio-btn";
+@import "./components/modal-form";
+@import "./components/modal";
+@import "./components/modal-close";
+
+@import "./pages/social";
+@import "./pages/contacts";
+@import "./pages/portfolio";
+
+@import "./layout/clients";
+@import "./layout/feautures";
+// @import "./layout/footer-portfolio";
+@import "./layout/footer";
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/navigation-and-portfolio-navigation";
+@import "./layout/team";
+@import "./layout/work";
+
+
+
