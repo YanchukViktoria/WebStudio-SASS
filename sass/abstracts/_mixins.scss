@@ -8,6 +8,29 @@
     color: $color;
 }
 
+@mixin positioning($disp, $fd, $jc, $al, $gp, $wr){
+    display: $disp;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $al;
+    gap: $gp;
+    flex-wrap: $wr;
+} 
+
+@mixin contacts-svg($wd, $hg, $mr, $fl){
+    width: $wd;
+    height: $hg;
+    margin-right: $mr;
+    fill: $fl;
+}
+
+@mixin min-max($mn-wd, $mn-hg, $mx-wd, $mx-hg){
+    min-width: $mn-wd;
+    min-height: $mn-hg;
+    max-width: $mx-wd;
+    max-height: $mx-hg;
+}
+
 @mixin tab($breakpoint){
     @media screen and (min-width: $breakpoint){
         @content;

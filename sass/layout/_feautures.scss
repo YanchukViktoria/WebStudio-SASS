@@ -1,6 +1,5 @@
 .section-features{
-    padding-top: 60px;
-    padding-bottom: 30px;
+    padding: 60px 0;
 
     @include desc(1200px){
         padding: 94px 0;
@@ -8,14 +7,42 @@
 }
 
 .feautures-list{
+    @include positioning(flex, _, center, _, 30px, wrap);
+
+    &-item{
+        &::before{
+            @extend %feautures-decor; //make place for img
+        }
+            //add img
+        &:nth-child(1)::before{
+            background-image: url(../img/antena.png);
+        }
+
+        &:nth-child(2)::before{
+            background-image: url(../img/clock.png);
+        }
+
+        &:nth-child(3)::before{
+            background-image: url(../img/diagramma.png);
+        }
+
+        &:nth-child(4)::before{
+            background-image: url(../img/astronaut.png);
+        }
+    }
 
     &-descript{
         @include font-style(Roboto, 14px, 400, 1.1, 0.03em, left, $p-color);
-        width: 450px;
+        @include min-max(_, _, 450px, _);
         margin-bottom: 30px;
 
-        @include desc(1200px){
+        @include tab(768px){
+            @include min-max(_, _, 354px, _);
             margin: 0;
+        }
+
+        @include desc(1200px){
+            @include min-max(_, _, 270px, _);
         }
     }
 
@@ -24,35 +51,8 @@
         padding-bottom: 10px;
         padding-top: 30px;
 
-        @include desc(1200px){
-            @include font-style(Roboto, 14px, 700, 1.1, 0.03em, left, $descript-and-header-color);
-        }
-    }
-
-    @include tab(768px){
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-        flex-direction: row;
-
-        &-item{
-            display: flex;
-            flex-direction: column;
-        }
-
-        &-descript{
-            width: 354px;
-        }
-    }
-
-    @include desc(1200px){
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-
-        &-descript{
-            width: 270px;
+        @include tab(768px){
+            @include font-style(Roboto, 14px, 700, 1.1, 0.03em, left, $descript-and-header-color); //text-align
         }
     }
 }

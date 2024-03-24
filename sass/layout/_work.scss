@@ -8,9 +8,7 @@
 }
 
 .work-list{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include positioning(flex, _, space-between, _, _, _);
 
     &-wrap{
         position: relative;
@@ -30,9 +28,7 @@
         width: 100%;
         height: 70px;
         background-color: rgba(47, 48, 58, 0.8);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include positioning(flex, _, center, center, _, _);
     }
 
 }

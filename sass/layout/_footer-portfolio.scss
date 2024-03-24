@@ -8,8 +8,7 @@
     }
 
     &-form{
-        display: flex;
-        gap: 12px;
+        @include positioning(flex, _, _, _, 12px, _);
 
         &-title{
             text-transform: uppercase;
@@ -34,9 +33,7 @@
             @include font-style(Roboto, 16px, 700, 1.8, 0.06em, center, $adress-hero-color);
             background-color: $blue-main-color;
             padding: 10px 13px 10px 26px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            @include positioning(flex, _, _, center, 10px, _);
             border-radius: 4px;
         }
 

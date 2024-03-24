@@ -3,84 +3,74 @@
         padding: 60px 0;
 
     &-wrap{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 60px 165px;
+        @include positioning(flex, _, center, _, 60px 165px, wrap);
 
         @include desc(1200px){
-            flex-wrap: nowrap;
-            gap: 0;
+            @include positioning(flex, _, center, _, 0, nowrap);
         }
     }
-
-    &-ico-list{
-        display: flex;
-        gap: 10px;
-
-        margin-top: 20px;
-    }
-
+    //**//
     &-addres{
         text-align: center;
-
         @include desc(1200px){
-            text-align-last: left;
+            text-align: left;
             margin-right: 70px;
         }
     }
 
-    &-form-title{
-        @include font-style(Roboto, 14px, 700, 1.1, 0.03em, center, $adress-hero-color);
-        text-transform: uppercase;
-        margin-bottom: 20px;
-
-        @include desc(1200px){
-            @include font-style(Roboto, 14px, 700, 1.1, 0.03em, left, $adress-hero-color);
-        }
-    }
-
     &-form{
-        display: flex;
-        gap: 20px 12px;
-        flex-direction: column;
-        align-items: center;
+        @include positioning(flex, column, _, center, 20px 12px, _);
 
         @include desc(1200px){
-            flex-direction: row;
+            @include positioning(flex, row, _, center, 20px 12px, _); //flex-direction
         }
 
-    }
+        &-title{
+            @include font-style(Roboto, 14px, 700, 1.1, 0.03em, center, $adress-hero-color);
+            text-transform: uppercase;
+            margin-bottom: 20px;
 
-    &-form-input{
-        background-color: inherit;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 4px;
-        padding: 15px;
-        width: 358px;
-        color: $adress-hero-color;
-    }
-    
-    &-form-input{
-        outline: none;
-        min-width: 450px;
+            @include desc(1200px){
+                @include font-style(Roboto, 14px, 700, 1.1, 0.03em, left, $adress-hero-color); //text-align
+            }
+        }
 
-        @include desc(1200px){
-            min-width: 258px;
+        &-input{
+            background-color: inherit;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            padding: 15px;
+            min-width: 450px;
+
+            @include desc(1200px){
+                min-width: 358px;
+            }
+        }
+            
+        &-btn{
+            @include font-style(Roboto, 16px, 700, 1.8, 0.06em, center, $adress-hero-color);
+            background-color: $blue-main-color;
+            padding: 10px 31px;
+            @include positioning(flex, _, _, center, 10px, _);
+            border-radius: 4px;
+        }
+            
+        &-svg{
+            fill: currentColor;
         }
     }
+}
+
+.adress{
+    &-list{
+        margin-top: 20px;
+
+        &-item:nth-child(1)>a{
+            color: $adress-hero-color;
+        }
     
-    &-form-btn{
-        @include font-style(Roboto, 16px, 700, 1.8, 0.06em, center, $adress-hero-color);
-        background-color: $blue-main-color;
-        padding: 10px 31px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        border-radius: 4px;
-    }
-    
-    &-form-svg{
-        fill: currentColor;
+        &-link{
+            @include font-style(Roboto, 14px, 400, 1.7, 0.03em, left, $footer-mail-number-color);
+        }
     }
 }

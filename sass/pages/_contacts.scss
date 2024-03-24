@@ -1,53 +1,48 @@
 .contact-list{
-    display: flex;
-    align-items: center;
+    display: none;
 
     &-item{
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: $p-color;
-        transition: color 0.5s ease;
-    }
+        @include positioning(flex, _, _, center, _, _);
 
-    &-item:hover{
-        color: $blue-main-color;
-    }
+        // style for contacts-list-svg
+            &:first-child>a>svg{
+                @include contacts-svg(14px, 10px, 8px, CurrentColor);
+            }
 
-    &-svg{
-        fill: currentColor;
+            &:last-child>a>svg{
+                @include contacts-svg(10px, 14px, 10px, CurrentColor);
+            }
 
         @include desc(1200px){
-            width: 16px;
-            height: 12px;
-        }
+            &:first-child>a>svg{
+                @include contacts-svg(16px, 12px, 8px, CurrentColor);
+            }
 
-        &-phone{
-            width: 10px;
-            height: 14px;
+            &:last-child>a>svg{
+                @include contacts-svg(10px, 16px, 10px, CurrentColor);
+            }
         }
     }
 
     &-link{
-        @include font-style(Roboto, 12px, 500, 1.1, 0.02em, _, _);
+        @include font-style(Roboto, 12px, 500, 1.1, 0.02em, _, $p-color);
         position: relative;
-        transition: color 0.5s ease;
+
+        &:hover{
+            color: $blue-main-color;
+            transition: color 0.5s ease;
+        }
 
         @include desc(1200px){
-            @include font-style(Roboto, 14px, 500, 1.1, 0.02em, _, _);
+            @include font-style(Roboto, 14px, 500, 1.1, 0.02em, _, $p-color);
         }
     }
 
     @include tab(768px){
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        margin-left: 96px;
+        @include positioning(flex, column, _, flex-start, 10px, _);
     }
 
     @include desc(1200px){
-        flex-direction: row;
-        gap: 30px;
-        margin-left: 315px;
+        @include positioning(_, row, _, center, 30px, _);
     }
 }

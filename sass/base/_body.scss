@@ -1,6 +1,5 @@
 body{
-    font-family: Roboto;
-    font-size: 14px;
+    @include font-style(Roboto, 14px, _, _, _, _, _);
     padding-top: 60px;
     margin: 0 auto;
 

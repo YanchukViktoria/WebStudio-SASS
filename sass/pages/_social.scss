@@ -1,8 +1,6 @@
 .join-list{
-    display: flex;
-    align-items: center;
-    gap: 10px;
     color: $p-color;
+    @include positioning(flex, _, _, center, 10px, _);
 
     &-link{
         color: $adress-hero-color;
