@@ -1336,6 +1336,14 @@ body {
     gap: 30px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .team-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 
 .section-work {
   padding-bottom: 94px;

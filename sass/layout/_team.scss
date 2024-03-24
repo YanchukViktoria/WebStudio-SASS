@@ -55,4 +55,8 @@
         flex-wrap: wrap;
         gap: 30px;
     }
+
+    @include desc(1200px){
+        flex-direction: row;
+    }
 }
