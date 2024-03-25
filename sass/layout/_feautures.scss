@@ -34,7 +34,7 @@
     }
 }
 
-.feature-container{
+.features-container{
     height: 120px;
     background-color: $team-bg-color;
     @include positioning(flex, _, center, center, _, _);
