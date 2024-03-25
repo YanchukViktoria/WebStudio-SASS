@@ -47,14 +47,6 @@
             }
         }
             
-        &-btn{
-            @include font-style(Roboto, 16px, 700, 1.8, 0.06em, center, $adress-hero-color);
-            background-color: $blue-main-color;
-            padding: 10px 31px;
-            @include positioning(flex, _, _, center, 10px, _);
-            border-radius: 4px;
-        }
-            
         &-svg{
             fill: currentColor;
         }
@@ -73,4 +65,23 @@
             @include font-style(Roboto, 14px, 400, 1.7, 0.03em, left, $footer-mail-number-color);
         }
     }
+}
+
+    //**ico**
+.join-list{
+    @include positioning(flex, _, center, _, 10px, _);
+    color: &p-color;
+
+    &-link{
+        @extend %icon-link;
+    }
+
+    &-link:hover{
+        background-color: $blue-main-color;
+    }
+
+    &-svg{
+        fill: currentColor;
+    }
+
 }

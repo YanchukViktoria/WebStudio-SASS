@@ -38,6 +38,14 @@
     }
 }
 
+.footer-form-btn{
+    @include font-style(Roboto, 16px, 700, 1.8, 0.06em, center, $adress-hero-color);
+    background-color: $blue-main-color;
+    padding: 10px 31px;
+    @include positioning(flex, _, _, center, 10px, _);
+    border-radius: 4px;
+}
+
 .filter-list-btn{
     padding: 6px 22px;
     border-radius: 4px;

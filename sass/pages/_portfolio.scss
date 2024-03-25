@@ -31,15 +31,15 @@
         box-sizing: content-box;
         position: relative;
         margin-bottom: 30px;
-        @include min-max(_, _, 450px, _,);
+        max-width: 450px;
 
         @include tab(768px){
-            @include min-max(_, _, 354px, _,);
+            max-width: 354px;
             margin: 0;
         }
 
         @include desc(1200px){
-            @include min-max(_, _, 370px, _,);
+            max-width: 370px;
             margin: 0;
         }
     }
@@ -58,7 +58,7 @@
     position: absolute;
     top: 1px;
     padding: 63px 24px 0px 24px;
-    @include min-max(_, _, 450px, _);
+    max-width: 450px;
     height: 294px;
     @include font-style(Roboto, 18px, 400, 1.5, 0.03em, _, $adress-hero-color);
     background-color: rgba(33, 150, 243, 0.9);
@@ -66,11 +66,11 @@
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @include tab(768px){
-        @include min-max(_, _, 354px, _);
+        max-width: 354px;
     }
 
     @include desc(1200px){
-        @include min-max(_, _, 370px, _);
+        max-width:370px ;
     }
 }
 
@@ -84,21 +84,17 @@
 }
 
 .filter-list{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px 8px;
-    margin-top: 60px;
-    margin-bottom: 34px;
+    @include positioning(flex, _, _, _, 15px 8px, wrap);
     max-width: 326px;
+    margin: 60px 0 30px 0;
 
     @include tab(768px){
         max-width: 575px;
         justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 60px auto 30px auto;
     }
 
     @include desc(1200px){
-        margin-top: 94px;
+        margin: 94px auto 50px auto;
     }
 }

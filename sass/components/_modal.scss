@@ -17,7 +17,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    @include min-max( _, _, 450px, 609px);
+    max-width: 450px;
+    max-height: 609px;
     background-color: $adress-hero-color;
     transform: translate(-50%, -50%);
     padding: 40px;
@@ -57,6 +58,13 @@
         color: $blue-main-color;
         border-bottom: 1px solid $blue-main-color;
     }
+    
+    &-svg{
+        fill: currentColor;
+        position: absolute;
+        top: 0px;
+        left: 12px;
+    }
 
     &-svg-close, &-close{
         fill: currentColor;
@@ -65,7 +73,6 @@
     @include desc(1200px){
         max-width: 528px;
         max-height: 581px;
-        @include min-max( _, _, 528px, 581px);
     }
 }
   
@@ -98,6 +105,9 @@
 }
 
 //modal spans
+.modal-span{
+    position: relative;
+}
 
 .modal-name-span{
     @include font-style(Roboto, 12px, 400, 1.1, 0.01em, center, $p-color);

@@ -51,3 +51,24 @@
         margin-bottom: 16px;
     }
 }
+
+    //**ico**
+    .icons-list{
+        @include positioning(flex, _, center, _, 10px, _);
+        margin-bottom: 20px;
+    
+        &-link{
+            @extend %icon-link;
+            color: rgba(175, 177, 184);
+        }
+    
+        &-link:hover{
+            color: $adress-hero-color;
+            background-color: $blue-main-color;
+        }
+    
+        &-svg{
+            fill: currentColor;
+        }
+    
+    }

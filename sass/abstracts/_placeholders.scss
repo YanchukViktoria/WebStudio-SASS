@@ -12,20 +12,12 @@
     animation-duration: 3s;
 }
 
-%feautures-decor{
-    content: "";
-    width: 450px;
-    height: 120px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-color: $bgimg-color;
-    background-position: center;
-
-    @include tab(768px){
-        width: 354px;
-    }
-
-    @include desc(1200px){
-        width: 270px;
-    }
+%icon-link{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
