@@ -1,6 +1,6 @@
 .section-hero{
     padding: 118px 0;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../main/mb/hero-mb 1x.jpg");
+    // background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../main/mb/hero-mb 1x.jpg");
 
     @include retin(
         url("../main/mb/hero-mb 1x.jpg"),
@@ -35,7 +35,6 @@
     }  
 
     @include desc(1200px){
-
         @include retin(
             url("../main/desc/hero-desc 1x.jpg"),
             url("../main/desc/hero-desc 2x.jpg"),

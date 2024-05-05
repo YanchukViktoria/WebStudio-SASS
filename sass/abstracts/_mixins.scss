@@ -34,14 +34,14 @@
 }
 
 @mixin retin($bg-1x, $bg-2x, $bg-3x){
-    background-image: $bg-1x;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),$bg-1x;
 
     @include retina(2, 192dpi, 2dppx){
-        background-image: $bg-2x;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),$bg-2x;
     }
 
     @include retina(3, 288dpi, 3dppx){
-        background-image: $bg-3x;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),$bg-3x;
     }
 }
 
