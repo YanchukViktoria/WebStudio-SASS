@@ -24,6 +24,27 @@
     fill: $fl;
 }
 
+@mixin retina($dev-ratio, $dpi, $dppx){
+    @media (min-device-pixel-ratio:$dev-ratio),
+    (min-resolution:$dpi),
+    (min-resolution:$dppx)
+    {
+        @content;
+    }
+}
+
+@mixin retin($bg-1x, $bg-2x, $bg-3x){
+    background-image: $bg-1x;
+
+    @include retina(2, 192dpi, 2dppx){
+        background-image: $bg-2x;
+    }
+
+    @include retina(3, 288dpi, 3dppx){
+        background-image: $bg-3x;
+    }
+}
+
 @mixin tab($breakpoint){
     @media screen and (min-width: $breakpoint){
         @content;
