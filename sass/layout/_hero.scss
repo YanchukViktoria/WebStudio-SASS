@@ -7,7 +7,7 @@
         url("../main/mb/hero-mb 3x.jpg")
     );
 
-    // @include bg-img("../main/Header.webp", _);
+    @include bg-img("../main/webp/bg-hero-desc-1x.webp", _);
 
     background-color: $bg-color;
     background-repeat: no-repeat;

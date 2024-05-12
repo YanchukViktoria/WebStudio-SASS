@@ -57,9 +57,9 @@
     }
 }
 
-// @mixin bg-img($webp, $fallback){
-//     @supports (bg-img: url(../main/Header.webp)){
-//         background-image: url("#{webp}");
-//     }
-//     background-image: url("#{fallback}");
-// }
+@mixin bg-img($webp, $fallback){
+    @supports (background-image:url("$webp")){
+        background-image: url("#{$webp}");
+    }
+    background-image: url("#{$fallback}");
+}

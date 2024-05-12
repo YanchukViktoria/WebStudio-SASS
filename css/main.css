@@ -1337,6 +1337,7 @@ body {
   padding: 118px 0;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../main/mb/hero-mb 1x.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../main/mb/hero-mb 1x.jpg");
+  background-image: url("_");
   background-color: rgb(47, 48, 58);
   background-repeat: no-repeat;
   background-position: center;
@@ -1352,6 +1353,11 @@ body {
   .section-hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../main/mb/hero-mb 3x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../main/mb/hero-mb 3x.jpg");
+  }
+}
+@supports (background-image: url("$webp")) {
+  .section-hero {
+    background-image: url("../main/webp/bg-hero-desc-1x.webp");
   }
 }
 .section-hero-title {
