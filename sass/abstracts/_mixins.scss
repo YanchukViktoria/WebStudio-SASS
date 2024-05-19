@@ -33,6 +33,13 @@
     }
 }
 
+@mixin bg-image($webp, $fallback, $gradient){
+    @supports (background-image: url("#{$webp}")){
+        background-image: $gradient, url("#{$webp}");
+    }
+    background-image: $gradient, url("#{$fallback}");
+}
+
 @mixin tab($breakpoint){
     @media screen and (min-width: $breakpoint){
         @content;

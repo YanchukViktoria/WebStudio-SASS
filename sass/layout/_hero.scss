@@ -1,18 +1,15 @@
 .section-hero{
     padding: 118px 0;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../main/mb/hero-mb 1x.jpg");
+
+    @include bg-image("../main/mb-webp/bg-hero-mb-1x.webp", "../main/mb/bg-hero-mb-1x.jpg", $gradient);
 
     @include retina(2,192dpi,2dppx) {
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url("../main/mb/hero-mb 2x.jpg");
+        @include bg-image("../main/mb-webp/bg-hero-mb-2x.webp", "../main/mb/bg-hero-mb-2x.jpg", $gradient);
     }
     
     @include retina(3,288dpi,3dppx) {
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url("../main/mb/hero-mb 3x.jpg");
+        @include bg-image("../main/mb-webp/bg-hero-mb-3x.webp", "../main/mb/bg-hero-mb-3x.jpg", $gradient);
     }
-
-    @include bg-img("../main/webp/bg-hero-desc-1x.webp", _);
 
     background-color: $bg-color;
     background-repeat: no-repeat;
@@ -33,28 +30,28 @@
         
     @include tab(768px){
         padding: 118px 0;
+        @include bg-image("../main/tab-webp/bg-hero-tab-1x.webp", "../main/tab/bg-hero-tab-1x.jpg", $gradient);
+
         @include retina(2,192dpi,2dppx) {
-            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url("../main/tab/bg-hero-tab-2x.jpg");
+            @include bg-image("../main/tab-webp/bg-hero-tab-2x.webp", "../main/tab/bg-hero-tab-2x.jpg", $gradient);
         }
         
         @include retina(3,288dpi,3dppx) {
-            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url("../main/tab/bg-hero-tab-3x.jpg");
+            @include bg-image("../main/tab-webp/bg-hero-tab-3x.webp", "../main/tab/bg-hero-tab-3x.jpg", $gradient);
         }
 
     }  
 
     @include desc(1200px){
         padding: 200px 0;
+        @include bg-image("../main/desc-webp/bg-hero-desc-1x.webp", "../main/desc/bg-hero-desc-1x.jpg", $gradient);
+
         @include retina(2,192dpi,2dppx) {
-            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url("../main/desc/bg-hero-desc-2x.jpg");
+            @include bg-image("../main/desc-webp/bg-hero-desc-2x.webp", "../main/desc/bg-hero-desc-2x.jpg", $gradient);
         }
         
         @include retina(3,288dpi,3dppx) {
-            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url("../main/desc/bg-hero-desc-3x.jpg");
+            @include bg-image("../main/desc-webp/bg-hero-desc-3x.webp", "../main/desc/bg-hero-desc-3x.jpg", $gradient);
         }
-    }  
+    }   
 }
