@@ -56,6 +56,7 @@
 .adress{
     &-list{
         margin-top: 20px;
+        @include positioning(flex, column, _, _, 8px, _);
 
         &-item:nth-child(1)>a{
             color: $adress-hero-color;
@@ -63,6 +64,10 @@
     
         &-link{
             @include font-style($roboto, 14px, 400, 0.03em, left, $footer-mail-number-color);
+        }
+
+        @include desc(1200px){
+            gap: 9px;
         }
     }
 }

@@ -1217,6 +1217,22 @@ body {
 
 .adress-list {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-align: _;
+      -ms-flex-align: _;
+          align-items: _;
+  gap: 8px;
+  -ms-flex-wrap: _;
+      flex-wrap: _;
 }
 .adress-list-item:nth-child(1) > a {
   color: rgb(255, 255, 255);
@@ -1228,6 +1244,11 @@ body {
   letter-spacing: 0.03em;
   text-align: left;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 1200px) {
+  .adress-list {
+    gap: 9px;
+  }
 }
 
 .join-list {
