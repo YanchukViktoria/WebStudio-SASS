@@ -1,0 +1,7 @@
+// @function lh($value...){
+//     $fiss: 0;
+//     @each $number in $value{
+//         $fiss: $number / $number;
+//     }
+//     @return $value 
+// }

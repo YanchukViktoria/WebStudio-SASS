@@ -10,7 +10,7 @@
     @include positioning(flex, _, center, _, 30px, wrap);
 
     &-descript{
-        @include font-style(Roboto, 14px, 400, 1.7, 0.03em, left, $p-color);
+        @include font-style($roboto, 14px, 400, 0.03em, left, $p-color);
         max-width: 450px;
         margin-bottom: 30px;
 
@@ -25,11 +25,11 @@
     }
 
     &-title{
-        @include font-style(Roboto, 14px, 700, 1.1, 0.03em, center, $descript-and-header-color);
+        @include font-style($roboto, 14px, 700, 0.03em, center, $descript-and-header-color);
         margin: 30px 0 10px;
 
         @include tab(768px){
-            @include font-style(Roboto, 14px, 700, 1.1, 0.03em, left, $descript-and-header-color); //text-align
+            @include font-style($roboto, 14px, 700, 0.03em, left, $descript-and-header-color); //text-align
         }
     }
 }

@@ -7,11 +7,11 @@
 }
     
 .client-title{
-    @include font-style(Roboto, 28px, 700, 1.1, 0.03em, center, $descript-and-header-color);
+    @include font-style($roboto, 28px, 700, 0.03em, center, $descript-and-header-color);
     margin-bottom: 30px;
 
     @include desc(1200px){
-        @include font-style(Roboto, 36px, 700, 1.1, 0.03em, center, $descript-and-header-color);
+        @include font-style($roboto, 36px, 700, 0.03em, center, $descript-and-header-color);
         margin-bottom: 50px;
     }
 }

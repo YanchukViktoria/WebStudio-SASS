@@ -1,8 +1,7 @@
-@mixin font-style( $ff, $fz, $fw, $lh, $ls, $ta, $color){
+@mixin font-style( $ff, $fz, $fw, $ls, $ta, $color){
     font-family: $ff;
     font-size: $fz;
     font-weight: $fw;
-    line-height: $lh;
     letter-spacing: $ls;
     text-align: $ta;
     color: $color;
@@ -24,6 +23,8 @@
     fill: $fl;
 }
 
+    //retina+image adaptation
+
 @mixin retina($dev-ratio, $dpi, $dppx){
     @media (min-device-pixel-ratio:$dev-ratio),
     (min-resolution:$dpi),
@@ -40,6 +41,8 @@
     background-image: $gradient, url("#{$fallback}");
 }
 
+    //adaptive mixins
+
 @mixin tab($breakpoint){
     @media screen and (min-width: $breakpoint){
         @content;
@@ -50,11 +53,4 @@
     @media screen and (min-width: $breakpoint){
         @content;
     }
-}
-
-@mixin bg-img($webp, $fallback){
-    @supports (background-image:url("$webp")){
-        background-image: url("#{$webp}");
-    }
-    background-image: url("#{$fallback}");
 }

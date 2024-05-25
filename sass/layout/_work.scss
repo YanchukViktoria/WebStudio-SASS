@@ -2,7 +2,7 @@
     padding-bottom: 94px;
 
     &-title{
-        @include font-style(Roboto, 36px, 700, 1.1, 0.03em, center, &descript-and-header-color);
+        @include font-style($roboto, 36px, 700, 0.03em, center, &descript-and-header-color);
         margin-bottom: 50px;
     }
 }
@@ -20,7 +20,7 @@
     }
 
     &-desc{
-        @include font-style(Roboto, 14px, 700, 1.1, 0.03em, center, $adress-hero-color);
+        @include font-style($roboto, 14px, 700, 0.03em, center, $adress-hero-color);
         text-transform: uppercase;
         position: absolute;
         bottom: 0;

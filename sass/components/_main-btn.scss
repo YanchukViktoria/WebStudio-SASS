@@ -1,5 +1,5 @@
 .section-hero-btn{
-    @include font-style(Roboto, 16px, 700, 1.8, 0.06em, center, $adress-hero-color);
+    @include font-style($roboto, 16px, 700, 0.06em, center, $adress-hero-color);
     width: 216px;
     height: 50px;
     border-radius: 4px;
@@ -18,7 +18,7 @@
 }
 
 .modal-btn-send{
-    @include font-style(Roboto, 16px, 700, 1.8, 0.06em, center, $adress-hero-color);
+    @include font-style($roboto, 16px, 700, 0.06em, center, $adress-hero-color);
     background-color: $blue-main-color;
     padding: 10px 52px;
     display: block;
@@ -39,7 +39,7 @@
 }
 
 .footer-form-btn{
-    @include font-style(Roboto, 16px, 700, 1.8, 0.06em, center, $adress-hero-color);
+    @include font-style($roboto, 16px, 700, 0.06em, center, $adress-hero-color);
     background-color: $blue-main-color;
     padding: 10px 31px;
     @include positioning(flex, _, _, center, 10px, _);
@@ -52,7 +52,7 @@
     background-color: $team-bg-color;
     display: block;
 
-    @include font-style(Roboto, 16px, 500, 1.6, 0.03em, _, $descript-and-header-color);
+    @include font-style($roboto, 16px, 500, 0.03em, _, $descript-and-header-color);
 
     &:hover{
         color: $adress-hero-color;

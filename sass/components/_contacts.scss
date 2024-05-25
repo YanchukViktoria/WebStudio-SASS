@@ -25,7 +25,7 @@
     }
 
     &-link{
-        @include font-style(Roboto, 12px, 500, 1.1, 0.02em, _, $p-color);
+        @include font-style($roboto, 12px, 500, 0.02em, _, $p-color);
         position: relative;
 
         &:hover{
@@ -34,7 +34,7 @@
         }
 
         @include desc(1200px){
-            @include font-style(Roboto, 14px, 500, 1.1, 0.02em, _, $p-color);
+            @include font-style($roboto, 14px, 500, 0.02em, _, $p-color);
         }
     }
 

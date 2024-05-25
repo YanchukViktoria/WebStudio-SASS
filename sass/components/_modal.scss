@@ -28,7 +28,7 @@
     z-index: 2;
   
     &-desc{
-        @include font-style(Roboto, 20px, 700, 1.1, 0.03em, center, _);
+        @include font-style($roboto, 20px, 700, 0.03em, center, _);
         padding-bottom: 12px;
     }
 
@@ -110,15 +110,15 @@
 }
 
 .modal-name-span{
-    @include font-style(Roboto, 12px, 400, 1.1, 0.01em, center, $p-color);
+    @include font-style($roboto, 12px, 400, 0.01em, center, $p-color);
 }
 
 .modal-span-privacy{
-    @include font-style(Roboto, 12px, 400, 1.1, 0.03em, center, _);
+    @include font-style($roboto, 12px, 400, 0.03em, center, _);
     padding-left: 8px;
 
     @include desc(1200px){
-        @include font-style(Roboto, 14px, 400, 1.7, 0.03em, center, _);
+        @include font-style($roboto, 14px, 400, 0.03em, center, _);
     }
 }
 

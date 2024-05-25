@@ -3,11 +3,11 @@
     padding: 60px 0;
 
     &-title{
-        @include font-style(Roboto, 28px, 700, 1.1, 0.03em, center, $descript-and-header-color);
+        @include font-style($roboto, 28px, 700, 0.03em, center, $descript-and-header-color);
         margin-bottom: 30px;
 
         @include desc(1200px){
-            @include font-style(Roboto, 36px, 700, 1.1, 0.03em, center, $descript-and-header-color); //font-size
+            @include font-style($roboto, 36px, 700, 0.03em, center, $descript-and-header-color); //font-size
             margin-bottom: 50px;
         }
     }
@@ -43,11 +43,11 @@
 
     &-title{
         margin: 30px 0px 10px 0px;
-        @include font-style(Roboto, 16px, 500, 1.1, 0.03em, center, $descript-and-header-color);
+        @include font-style($roboto, 16px, 500, 0.03em, center, $descript-and-header-color);
     }
 
     &-descript{
-        @include font-style(Roboto, 16px, 400, 1.1, 0.03em, center, $p-color);
+        @include font-style($roboto, 16px, 400, 0.03em, center, $p-color);
         margin-bottom: 16px;
     }
 }

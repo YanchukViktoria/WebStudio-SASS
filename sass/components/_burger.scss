@@ -41,7 +41,7 @@
     }
 
     &-link{
-        @include font-style(Roboto, 40px, 500, 1.15, 0.02em, _, $descript-and-header-color);
+        @include font-style($roboto, 40px, 500, 0.02em, _, $descript-and-header-color);
         
         &:hover{
             color: $blue-main-color;
@@ -57,12 +57,12 @@
         margin-bottom: 32px;
 
         &:first-child{
-            @include font-style(Roboto, 34px, 500, 1.1, 0.02em, _, $blue-main-color);
+            @include font-style($roboto, 34px, 500, 0.02em, _, $blue-main-color);
             
         }
     
         &:last-child{
-            @include font-style(Roboto, 24px, 500, 1.1, 0.02em, _, $p-color);
+            @include font-style($roboto, 24px, 500, 0.02em, _, $p-color);
             margin: 0;
         }
     }
@@ -77,6 +77,6 @@
     }
 
     &-link{
-        @include font-style(Roboto, 18px, 500, 1.2, 0.02em, _, $blue-main-color);
+        @include font-style($roboto, 18px, 500, 0.02em, _, $blue-main-color);
     }
 }

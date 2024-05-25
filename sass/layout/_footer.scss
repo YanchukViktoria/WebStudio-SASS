@@ -9,7 +9,7 @@
             @include positioning(flex, _, center, _, 0, nowrap);
         }
     }
-    //**//
+
     &-addres{
         text-align: center;
         @include desc(1200px){
@@ -22,16 +22,16 @@
         @include positioning(flex, column, _, center, 20px 12px, _);
 
         @include desc(1200px){
-            @include positioning(flex, row, _, center, 20px 12px, _); //flex-direction
+            @include positioning(flex, row, _, center, 20px 12px, _);
         }
 
         &-title{
-            @include font-style(Roboto, 14px, 700, 1.1, 0.03em, center, $adress-hero-color);
+            @include font-style($roboto, 14px, 700, 0.03em, center, $adress-hero-color);
             text-transform: uppercase;
             margin-bottom: 20px;
 
             @include desc(1200px){
-                @include font-style(Roboto, 14px, 700, 1.1, 0.03em, left, $adress-hero-color); //text-align
+                @include font-style($roboto, 14px, 700, 0.03em, left, $adress-hero-color);
             }
         }
 
@@ -62,7 +62,7 @@
         }
     
         &-link{
-            @include font-style(Roboto, 14px, 400, 1.7, 0.03em, left, $footer-mail-number-color);
+            @include font-style($roboto, 14px, 400, 0.03em, left, $footer-mail-number-color);
         }
     }
 }
