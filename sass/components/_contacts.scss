@@ -26,7 +26,7 @@
 
     &-link{
         @include font-style($roboto, 12px, 500, 0.02em, _, $p-color);
-        @include positioning(flex, _, _, center, _, _, _);
+        @include positioning(flex, _, _, center, _, _);
         position: relative;
 
         &:hover{
